@@ -141,9 +141,20 @@ However, it is observed is that higher budget per student does not have a positi
 
 
 ## Summary
-Replacing the math and reading scores of ninth graders from Thomas High School did not have any visibly impact on the overall analysis.\
+Replacing the math and reading scores of ninth graders from Thomas High School did not have any visible impact on the overall analysis.
 As observed in the Analysis section above, under school summary, very slight changes were observed for the metrics for Thomas High School. After using the dataframe where the scores of ninth graders were removed, we see that;
 1. The percentage of students passing math is lowered by less than 0.1%.
 2. The percentage of students passing reading has been impacted sightly more. They decreased by 0.3 %.
 3. Similar to the reading, the percentage of students passing overall also decreased by 0.3 %.
-4. The average math score decreased by less than 0.1%, while there was no change to the reading scores.
+4. The average math score decreased by less than 0.1%, while there was no change to the reading scores.\
+It is not surprising that the changes were very slight because the average scores of the ninth graders (before they were re-set to NaN) were 82.7 for math, and 83.8 for reading. This is very similar to the average scores taken for 10th through 12th grade, where math is 83.4 and reading is 83.9. THerefore, inclusion, or deletion of ninth grade scores is not expected to cause any impactful changes to the average scores.\
+\
+One thing to note is that in the analyses for obtaining the school summary, with the replaced ninth grade scores, the percentage of students passing math, reading, and math-and-reading, were initially calculated using the total number of high school students in Thomas High schools. This is an incorrect approach because the scores used for the calculation belong to students from 10th through 12th grade, and so the percentage passing will be much lower than what it should be.\
+The accurate appraoch would be calculate the percentage passing using only the counts of students from 10th through 12th grade. Once this adjustment to the total students was made, the calculation of the percentage of students passing the different categories yielded much higher numbers. We can see the comparison in the figure below. 
+
+![THC_comparison_adjustment](https://user-images.githubusercontent.com/71800628/119238151-7a3dcb00-bb06-11eb-9cb9-bb7075080a90.png)
+
+We notice that 
+1. Percentage of students passing math increased from 66.9% to 93.2%
+2. Percentage of students passing reading increased from 69.7% to 97.%
+3. Overall percentage of students passing math and reading changed from 65.1 to 90.6%.
