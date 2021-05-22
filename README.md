@@ -37,8 +37,7 @@ student_count = school_data_complete_df["Student ID"].count()
 # Calculate the Total Budget
 total_budget = school_data_df["budget"].sum()
 ```
-The total number of students, used for calculating passing percentages,![school_district_summary](https://user-images.githubusercontent.com/71800628/119212288-fee40700-ba7c-11eb-8197-d8b21867aa1e.png)
- were adjusted to exclude the ninth graders from Thomas High School, and this was used in further analyses to obtain the district summary.\
+The total number of students, used for calculating passing percentages, were adjusted to exclude the ninth graders from Thomas High School, and this was used in further analyses to obtain the district summary.\
 The average and math and reading scores, of students accross the district, were calculated.\
 The passing grade was set at 70%. The percentage of students who passed  math, reading, and math-and-reading together were calculated for the whole district. Part of the code is referenced below.
 ```
@@ -46,6 +45,7 @@ The passing grade was set at 70%. The percentage of students who passed  math, r
 per_passing_math_reading = school_data_complete_df[(school_data_complete_df["reading_score"] >= 70)
                                                & (school_data_complete_df["math_score"] >= 70)]
 ```
+\
 All of the information for the district were then summarized into a district summary dataframe, shown below.
 
 ![school_district_summary](https://user-images.githubusercontent.com/71800628/119212298-0f947d00-ba7d-11eb-81b7-db2b51e6530a.png)
@@ -58,10 +58,9 @@ All the information were then summarized into the school summary.
 
 ### The 5 Top and Bottom Performing Schools:
 The five top, and bottom performing schools, based upon their overall passing grade, were obtained from the school summary dataframe.\
-Below is a piture of the 5 top performing schools, for reference.
+The 5 top performing schools is referenced below.
 
 ![top_5_schools](https://user-images.githubusercontent.com/71800628/119212367-744fd780-ba7d-11eb-9271-54aa084a3d8e.png)
-
 
 ### The Average Math and Reading Scores for each grade type from each school:
 The math and reading scores, for each grade, were obtained from the merged dataframe, and then grouped by each school to get the average for each school.\
@@ -108,8 +107,7 @@ The only expected change would be for Thomas High School, which was negligible a
 - Similarly, no changes were observed in the average reading scores, for each grade level, from each school, except the scores for the ninth graders from Thomas High School were removed.
 - The scores by school spending per student were not impacted. This is expected because the scores of ninth graders will not impact the school budget for each student.\
 However, it is observed is that higher budget per student does not have a positive impact on student performace. On the contrary, there is a negative correlation between spending per student and the scores. 
-- The scores by school size were not impacted after replacing the grades, for similar reasons as above. Schools with greater than 2000 students performed markedly lower.\
-A picture of the analysis is shown below.
+- The scores by school size were not impacted after replacing the grades, for similar reasons as above. Schools with greater than 2000 students performed markedly lower, as seen below.\
 
 ![school_size_analysis](https://user-images.githubusercontent.com/71800628/119212522-9007ad80-ba7e-11eb-810f-abee27d784d2.png)
 
