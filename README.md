@@ -3,10 +3,10 @@
 ## Overview of Project 
 
 ### Purpose
-The purpose of this project is to aggragate the data from a city school district, to perform analyses, in order to provide insights about performance trends with respect to various school and district metrics.\
+The purpose of this project is to aggragate the data from a city school district, to perform analyses, in order to provide insights about student's performance trends, in standardized testing, with respect to various school and district metrics.\
 In this case, the analyses is performed to make sure that the state testing standards are upheld in the event of propable academic dishonesty, amongst ninth graders of Thomas High Schools, in this particular school district.\
 To that end, the reading and the math scores, of ninth graders at Thomas High School, are replaced by NaN values.\
-A school district analysis is then performed to update the following metrics.
+A school district analysis is then performed on the replaced data-set to update the following metrics.
 - The district summary.
 - The schools summary.
 - The top 5 performing schools, based on the overall passing rate.
@@ -22,7 +22,7 @@ A school district analysis is then performed to update the following metrics.
 - Software : Python 3.7.9, Jupyter Notebook 6.1.4, Pandas 1.1.3, Numpy 1.17.0, Anaconda 1.7.2
 
 ## Results 
-The student data file and school data file were read into Jupyter Notebook as dataframes.\
+The student data file, and school data file were read into Jupyter Notebook as dataframes.\
 The math and reading scores, of the ninth graders from Thomas High School, are to be disregarded. To achieve this, they were successfully changed to NaNs in the student data frame. (The student names are hidden to protect privacy)
 ![NaNs](https://user-images.githubusercontent.com/71800628/119212212-75343980-ba7c-11eb-8714-6f81fd9b3f4b.png)
 
@@ -78,6 +78,11 @@ tenth_grade_avg_math = tenth_graders_math.groupby([school_data_complete_df["scho
 eleventh_grade_avg_math = eleventh_graders_math.groupby([school_data_complete_df["school_name"]]).mean()
 twelfth_grade_avg_math = twelfth_graders_math.groupby([school_data_complete_df["school_name"]]).mean()
 ```
+Shown below is the result obtained for the math scores in different schools.
+
+![math_grade_per_school](https://user-images.githubusercontent.com/71800628/119230990-4487ea80-bae4-11eb-88ee-846ab2f8614c.png)
+
+
 ### The Scores by School Spending Per Student:
 The maximum and minimum budget per student, from the school summary dataframe, was used to create four spending bins.
 ```
@@ -87,43 +92,48 @@ group_names = ["<$584", "$585-629", "$630-644", "$645-675"]
 ```
 The schools were then put into the appropriate spending bins and the scores and passing percenatges were calculated for each of the spending bins.
 
-### The Scores by School Size, and School Type:
+![school_budget_analysis](https://user-images.githubusercontent.com/71800628/119231023-61bcb900-bae4-11eb-998f-acf371dcafb3.png)
+
+
+### The Scores by School Size:
 Four bins for school size were created, and schools were assigned to the bins depending upon their total number of students.
 ```
 # Establish the bins.
 size_bins = [0, 1000, 2000, 5000]
 group_names = ["Small (<1000)", "Medium (1000-2000)", "Large(2000-5000)"]
 ```
-The scores and passing percentages for each bin were then calculates.\
+The scores and passing percentages for each bin were then calculates.
+
+![school_size_analysis](https://user-images.githubusercontent.com/71800628/119231051-81ec7800-bae4-11eb-9a5a-3c6d4f265b0d.png)
+
+
+### The Scores by School Type:
 Similar analyses was done depending upon the type of school, whether district or charter.
 
+![school_type_analysis](https://user-images.githubusercontent.com/71800628/119231080-a0527380-bae4-11eb-93c3-32d8177b449a.png)
+
+
 ## Analysis
-A comparison was done between the metrics obtained before, and after the replacement of the grades, of ninth graders from Thomas High School.
+A comparison was done between the metrics obtained before the replacement of the grades (obtained previously while working through the module), and after the replacement of the grades (obtained in this analyses).\
 - The district summary did not show much change. The average reading scores were identical, and the other numbers were only very slightly lower after the analyses.
 
-![comparison_of_district_summary](https://user-images.githubusercontent.com/71800628/119215213-d0245b80-ba91-11eb-9a14-5edd5d5f171e.png)
+![comparison_of_district_summary](https://user-images.githubusercontent.com/71800628/119231289-b7de2c00-bae5-11eb-945e-66aa4b4ee039.png)
 
+- The school summary is not expected to change overall because scores of ninth graders of Thomas High School will not affect other schools.\
+The only expected change would be for Thomas High School, which was negligible after the calculations were adjusted to include only students from 10th through the 12th grade. This can be seen below.
 
-- The school summary is not expected to change overall.\
-The only expected change would be for Thomas High School, which was negligible after the calculations were adjusted to include only students from 10th through the 12th grade.This can be seen below.
-
-![comparison_of_THC](https://user-images.githubusercontent.com/71800628/119215232-ee8a5700-ba91-11eb-8aa0-28d73099cfbb.png)
+![comparison_of_THC](https://user-images.githubusercontent.com/71800628/119231333-fecc2180-bae5-11eb-866b-7f2040cf6b82.png)
 
 - Thomas High School continued to be within the top 5 performing schools. The removal of ninth grade scores did not have any visible impact.
-- No changes were observed in the average math scores, for each grade level, from each school, except the scores for the ninth graders from Thomas High School were removed.
-
-![math_grade_per_school](https://user-images.githubusercontent.com/71800628/119212942-4c627300-ba81-11eb-9eef-969dd1b41e56.png)
-
+- No changes were observed in the average math scores, for each grade level, from each school, except the scores for the ninth graders from Thomas High School were removed. (Figure included under Results section).\
 - Similarly, no changes were observed in the average reading scores, for each grade level, from each school, except the scores for the ninth graders from Thomas High School were removed.
-- The scores by school spending per student were not impacted. This is expected because the scores of ninth graders will not impact the school budget for each student.\
+
+![reading_grade_per_school](https://user-images.githubusercontent.com/71800628/119231379-363ace00-bae6-11eb-8ee6-6f8eab884a66.png)
+
+- The scores by school spending per student were not impacted (fig. in Results section). This is expected because the scores of ninth graders will not impact the school budget for each student.\
 However, it is observed is that higher budget per student does not have a positive impact on student performace. On the contrary, there is a negative correlation between spending per student and the scores. 
-- The scores by school size were not impacted after replacing the grades, for similar reasons as above. Schools with greater than 2000 students performed markedly lower, as seen below.
-
-![school_size_analysis](https://user-images.githubusercontent.com/71800628/119212522-9007ad80-ba7e-11eb-810f-abee27d784d2.png)
-
-- The scores by the school type were not impacted by the analyses for similar reasons. However charter schools performed better than district schools.
-
-![school_type_analysis](https://user-images.githubusercontent.com/71800628/119212532-9ac24280-ba7e-11eb-90e1-186414b5faf6.png)
+- The scores by school size were not impacted after replacing the grades, for similar reasons as above (fig. in Results section). Schools with greater than 2000 students performed markedly lower, as seen below.
+- The scores by the school type were not impacted by the analyses for similar reasons (fig. in Results section). However charter schools performed better than district schools.
 
 
 ## Summary
@@ -133,6 +143,6 @@ However a change was observed, as expected, in the category of passing percentag
 2. Percentage of students passing reading was 69.7% which changed to 97.%
 3. Overall percentage of students passing math and reading changed from 65.1 to 90.6%
 
-![THC_comparison_adjustment](https://user-images.githubusercontent.com/71800628/119215339-b5061b80-ba92-11eb-8592-b59b53506ccd.png)
+![THC_comparison_adjustment](https://user-images.githubusercontent.com/71800628/119231504-dc86d380-bae6-11eb-9262-a060c56806fb.png)
 
 This change was eleminated once adjustment was made to the total number of students, used to calculate the percentages, to include only from the 10th through the 12 grade. This would give a more accurate number because the grades taken into consideration are of the 10th through the 12th grade students.
