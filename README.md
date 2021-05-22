@@ -123,7 +123,7 @@ A comparison was done between the metrics obtained before the replacement of the
 
 - The school summary is not expected to change overall because scores of ninth graders of Thomas High School will not affect other schools.\
 The only expected change would be for Thomas High School. As observed from the figure below, the changes are very small affecting only till the tenths place after the decimal point.\
-The average math score using the replaced dataframe was less than 0.1. There was no difference in the average reading score.The percentage of students passing math and reading, and math-and-reading together were lowered after ninth graders scores were eliminated. Detailed discussion on this is under the Summary section below.
+The average math score using the replaced dataframe was less than 0.1. There was no difference in the average reading score. The percentage of students passing math and reading, and math-and-reading together were lowered after ninth graders scores were eliminated. Detailed discussion on this is under the Summary section below.
 
 ![comparison_of_THC](https://user-images.githubusercontent.com/71800628/119231333-fecc2180-bae5-11eb-866b-7f2040cf6b82.png)
 
