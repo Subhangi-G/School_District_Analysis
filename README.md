@@ -100,17 +100,16 @@ Similar analyses was done depending upon the type of school, whether district or
 ## Analysis
 A comparison was done between the metrics obtained before, and after the replacement of the grades, of ninth graders from Thomas High School.
 - The district summary did not show much change. The average reading scores were identical, and the other numbers were only very slightly lower after the analyses.
+
+![comparison_of_district_summary](https://user-images.githubusercontent.com/71800628/119215213-d0245b80-ba91-11eb-9a14-5edd5d5f171e.png)
+
+
 - The school summary is not expected to change overall.\
-The only expected change would be for Thomas High School, which was negligible after the calculations were adjusted to include only students from 10th through the 12th grade.This can be seen below.\
-From analysis before replacing ninth grade scores:
+The only expected change would be for Thomas High School, which was negligible after the calculations were adjusted to include only students from 10th through the 12th grade.This can be seen below.
 
-![THC_before_replacement](https://user-images.githubusercontent.com/71800628/119212875-d6f6a280-ba80-11eb-9e03-e780b2dfec0f.png)
+![comparison_of_THC](https://user-images.githubusercontent.com/71800628/119215232-ee8a5700-ba91-11eb-8aa0-28d73099cfbb.png)
 
-From From analysis after replacing ninth grade scores:
-
-![THC_after_replacement](https://user-images.githubusercontent.com/71800628/119212882-e37afb00-ba80-11eb-9137-028aa97e06eb.png)
-
-- Thomas High School still figured within the top 5 performing schools. The removal of ninth grade scores did not have any visible impact.
+- Thomas High School continued to be within the top 5 performing schools. The removal of ninth grade scores did not have any visible impact.
 - No changes were observed in the average math scores, for each grade level, from each school, except the scores for the ninth graders from Thomas High School were removed.
 
 ![math_grade_per_school](https://user-images.githubusercontent.com/71800628/119212942-4c627300-ba81-11eb-9eef-969dd1b41e56.png)
@@ -118,7 +117,7 @@ From From analysis after replacing ninth grade scores:
 - Similarly, no changes were observed in the average reading scores, for each grade level, from each school, except the scores for the ninth graders from Thomas High School were removed.
 - The scores by school spending per student were not impacted. This is expected because the scores of ninth graders will not impact the school budget for each student.\
 However, it is observed is that higher budget per student does not have a positive impact on student performace. On the contrary, there is a negative correlation between spending per student and the scores. 
-- The scores by school size were not impacted after replacing the grades, for similar reasons as above. Schools with greater than 2000 students performed markedly lower, as seen below.\
+- The scores by school size were not impacted after replacing the grades, for similar reasons as above. Schools with greater than 2000 students performed markedly lower, as seen below.
 
 ![school_size_analysis](https://user-images.githubusercontent.com/71800628/119212522-9007ad80-ba7e-11eb-810f-abee27d784d2.png)
 
@@ -129,8 +128,11 @@ However, it is observed is that higher budget per student does not have a positi
 
 ## Summary
 Replacing the math and reading scores of ninth graders from Thomas High School did not have any visible impact on the overall analysis.\
-However a change was observed in the category of student passing percentage in math, reading , and math and reading taken together.
+However a change was observed, as expected, in the category of passing percentages of students.
 1. Percentage of students passing math was 66.9% which changed to 93.2%
 2. Percentage of students passing reading was 69.7% which changed to 97.%
-3. Overall percentage of students passing math and reading changed from 65.1 to 90.6%\
-The changes observed are expected because the total number of students used to calculate the percentages were adjusted to only include the students from the 10th through 12 grade. This would give a more accurate number because the grades taken into consideration are of the 10th through the 12th grade students.
+3. Overall percentage of students passing math and reading changed from 65.1 to 90.6%
+
+![THC_comparison_adjustment](https://user-images.githubusercontent.com/71800628/119215339-b5061b80-ba92-11eb-8592-b59b53506ccd.png)
+
+This change was eleminated once adjustment was made to the total number of students, used to calculate the percentages, to include only from the 10th through the 12 grade. This would give a more accurate number because the grades taken into consideration are of the 10th through the 12th grade students.
