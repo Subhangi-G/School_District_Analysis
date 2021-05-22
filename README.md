@@ -4,7 +4,7 @@
 
 ### Purpose
 The purpose of this project is to aggragate the data from a city school district, to perform analyses, in order to provide insights about student's performance trends, in standardized testing, with respect to various school and district metrics.\
-In this case, the analyses is performed to make sure that the state testing standards are upheld in the event of propable academic dishonesty, amongst ninth graders of Thomas High Schools, in this particular school district.\
+In this case, the analyses is performed to make sure that the state testing standards are upheld in the event of probable academic dishonesty, amongst ninth graders of Thomas High Schools, in this particular school district.\
 To that end, the reading and the math scores, of ninth graders at Thomas High School, are replaced by NaN values.\
 A school district analysis is then performed on the replaced data-set to update the following metrics.
 - The district summary.
@@ -122,7 +122,8 @@ A comparison was done between the metrics obtained before the replacement of the
 
 
 - The school summary is not expected to change overall because scores of ninth graders of Thomas High School will not affect other schools.\
-The only expected change would be for Thomas High School, which was negligible after the calculations were adjusted to include only students from 10th through the 12th grade. This can be seen below.
+The only expected change would be for Thomas High School. As observed from the figure below, the changes are very small affecting only till the tenths place the decimal point.\
+The average math score using the replaced dataframe was less than 0.1. There was no difference in the average reading score.The percentage of students passing math and reading, and math-and-reading together were lowered after ninth graders scores were eliminated.
 
 ![comparison_of_THC](https://user-images.githubusercontent.com/71800628/119231333-fecc2180-bae5-11eb-866b-7f2040cf6b82.png)
 
@@ -140,12 +141,9 @@ However, it is observed is that higher budget per student does not have a positi
 
 
 ## Summary
-Replacing the math and reading scores of ninth graders from Thomas High School did not have any visible impact on the overall analysis.\
-However a change was observed, as expected, in the category of passing percentages of students.
-1. Percentage of students passing math was 66.9% which changed to 93.2%
-2. Percentage of students passing reading was 69.7% which changed to 97.%
-3. Overall percentage of students passing math and reading changed from 65.1 to 90.6%
-
-![THC_comparison_adjustment](https://user-images.githubusercontent.com/71800628/119231504-dc86d380-bae6-11eb-9262-a060c56806fb.png)
-
-This change was eleminated once adjustment was made to the total number of students, used to calculate the percentages, to include only from the 10th through the 12 grade. This would give a more accurate number because the grades taken into consideration are of the 10th through the 12th grade students.
+Replacing the math and reading scores of ninth graders from Thomas High School did not have any visibly impact on the overall analysis.\
+As observed in the Analysis section above, under school summary, very slight changes were observed for the metrics for Thomas High School. After using the dataframe where the scores of ninth graders were removed, we see that;
+1. The percentage of students passing math is lowered by less than 0.1%.
+2. The percentage of students passing reading has been impacted sightly more. They decreased by 0.3 %.
+3. Similar to the reading, the percentage of students passing overall also decreased by 0.3 %.
+4. The average math score decreased by less than 0.1%, while there was no change to the reading scores.
