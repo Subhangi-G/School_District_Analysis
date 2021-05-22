@@ -103,14 +103,16 @@ A comparison was done between the metrics obtained before, and after the replace
 - The school summary is not expected to change overall.\
 The only expected change would be for Thomas High School, which was negligible after the calculations were adjusted to include only students from 10th through the 12th grade.This can be seen below.\
 From analysis before replacing ninth grade scores:
+
 ![THC_before_replacement](https://user-images.githubusercontent.com/71800628/119212875-d6f6a280-ba80-11eb-9e03-e780b2dfec0f.png)
 
 From From analysis after replacing ninth grade scores:
+
 ![THC_after_replacement](https://user-images.githubusercontent.com/71800628/119212882-e37afb00-ba80-11eb-9137-028aa97e06eb.png)
 
 - Thomas High School still figured within the top 5 performing schools. The removal of ninth grade scores did not have any visible impact.
 - No changes were observed in the average math scores, for each grade level, from each school, except the scores for the ninth graders from Thomas High School were removed.
-- 
+
 ![math_grade_per_school](https://user-images.githubusercontent.com/71800628/119212942-4c627300-ba81-11eb-9eef-969dd1b41e56.png)
 
 - Similarly, no changes were observed in the average reading scores, for each grade level, from each school, except the scores for the ninth graders from Thomas High School were removed.
